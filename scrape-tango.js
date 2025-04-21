@@ -17,9 +17,9 @@
 
 
 console.log((() => {
-    const edgeArray = Array.from(Array(7).keys().map(() => '+')).join('-')
-    const lineArray = Array.from(Array(7).keys().map(() => '|')).join(' ')
-    const board = Array.from(Array(13).keys().map((i) => Array.from(i % 2 ? lineArray : edgeArray)))
+    const edgeArray = Array(7).fill('+').join('-')
+    const lineArray = Array(7).fill('|').join(' ')
+    const board = Array.from({length: 13}, (_, i) => Array.from(i % 2 ? lineArray : edgeArray))
     const mapEdges = {
         'Cross': 'x',
         'Equal': '=',
