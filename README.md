@@ -56,8 +56,8 @@ tango.py samples\sample_input.txt
 
 ## Authors
 
-[Eduardo Tubert](www.linkedin.com/in/eduardo-t-6766a42b0)
+[Eduardo Tubert](https://www.linkedin.com/in/eduardo-t-6766a42b0)
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE)
