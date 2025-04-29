@@ -40,13 +40,16 @@ def check_board(board, restrictions):
         return check_list.count(SUN) <= 3 and check_list.count(MOON) <= 3
 
     def check_restrictions():
+        def get_restriction_cell(cell):
+            x, y = (cell)
+            ch = board[y][x]
+            return ch
+
         for cell1 in restrictions:
             for cell2 in restrictions[cell1]:
-                ch1 = board[cell1[1]][cell1[0]]
-                if ch1 == ' ':
-                    continue
-                ch2 = board[cell2[1]][cell2[0]]
-                if ch2 == ' ':
+                ch1 = get_restriction_cell(cell1)
+                ch2 = get_restriction_cell(cell2)
+                if ch1 == ' ' or ch2 == ' ':
                     continue
 
                 restriction_type = restrictions[cell1][cell2]
